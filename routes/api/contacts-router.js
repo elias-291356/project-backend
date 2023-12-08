@@ -12,7 +12,9 @@ router.post('/', isEmptyBody, contactController.add);
 
 router.put('/:id', isValidId, isEmptyBody, contactController.updateById);
 
-// router.delete('/:id',isValidId, contactController.deleteById);
+router.patch('/:id/favorite', isValidId, isEmptyBody, contactController.updateFavoriteById);
+
+router.delete('/:id', isValidId, contactController.deleteById);
 
 
 export default router;
